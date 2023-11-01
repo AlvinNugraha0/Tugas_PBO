@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas | Pemrograman Berorientasi Object 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Menghitung Luas dan keliling Bangun Datar</h1>
+    <p>Pilih menu di bawah untuk menghitung bangun datar :</p>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Persegi Panjang</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Segitiga</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Lingkaran</button>
+    </div>
+
+    <div id="London" class="tabcontent">
+        <h1>Hitung Luas Persegi Panjang</h1>
+
+            <form class="inputan_persegi">
+                <label for="panjang">Panjang :</label>
+                <input type="number" id="panjang" name="panjang" placeholder="Masukan Panjang..">
+                
+                <label for="lebar">Lebar :</label>
+                <input type="number" id="lebar" name="lebar" placeholder="Masukan Lebar..">
+                
+                <input class="hitung" type="button" value="Hitung" onclick="hitungLuasDanKelilingPersegiPanjang()">
+                <input class="reset" type="button" value="Reset" onclick="resetForm()">
+
+                <label for="luasPersegi">Luas :</label>
+                <input type="text" id="luasPersegi" name="luasPersegi" placeholder="0" readonly>
+
+                <label for="kelilingPersegi">Keliling :</label>
+                <input type="text" id="kelilingPersegi" name="kelilingPersegi" placeholder="0" readonly>
+            </form>
+
+    </div>
+
+    <div id="Paris" class="tabcontent">
+        <h1>Hitung Luas dan Keliling Segitiga</h1>
+
+        <form class="inputan_segitiga">
+            <label for="alas">Alas :</label>
+            <input type="number" id="alas" name="alas" placeholder="Masukan Alas..">
+        
+            <label for="tinggi">Tinggi :</label>
+            <input type="number" id="tinggi" name="tinggi" placeholder="Masukan Tinggi..">
+        
+            <label for="sisi1">Sisi 1 :</label>
+            <input type="number" id="sisi1" name="sisi1" placeholder="Masukan Sisi ke-1..">
+        
+            <label for="sisi2">Sisi 2 :</label>
+            <input type="number" id="sisi2" name="sisi2" placeholder="Masukan Sisi ke-2..">
+        
+            <label for="sisi3">Sisi 3 :</label>
+            <input type="number" id="sisi3" name="sisi3" placeholder="Masukan sisi ke-3..">
+        
+            <input type="button" value="Hitung" onclick="hitungLuasDanKeliling()">
+            <input class="reset" type="button" value="Reset" onclick="resetForm()">
+
+            <label for="luasSegitiga">Luas :</label>
+            <input type="text" id="luasSegitiga" name="luasSegitiga" placeholder="0" readonly>
+        
+            <label for="kelilingSegitiga">Keliling :</label>
+            <input type="text" id="kelilingSegitiga" name="kelilingSegitiga" placeholder="0" readonly>
+          </form>
+
+    </div>
+
+    <div id="Tokyo" class="tabcontent">
+        <h1>Hitung Luas dan Keliling Lingkaran</h1>
+
+        <form class="inputan_Lingkaran">
+            <label for="jari-jari">Jari-jari :</label>
+            <input type="number" id="jari-jari" name="jari-jari" placeholder="Masukan Jari-Jari..">
+        
+            <input type="button" value="Hitung" onclick="hitungLuasDanKelilingLingkaran()">
+            <input type="button" value="Reset" onclick="resetForm()">
+        
+            <label for="luas">Luas :</label>
+            <input type="text" id="luas" name="luas" placeholder="0" readonly>
+        
+            <label for="keliling">Keliling :</label>
+            <input type="text" id="keliling" name="keliling" placeholder="0" readonly>
+        
+          </form>
+    </div>
+
+      
+    <script src="script.js"></script>
+
+</body>
+</html>
